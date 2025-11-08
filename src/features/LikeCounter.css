@@ -1,0 +1,48 @@
+.like-counter {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.like-counter .like-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease, transform 80ms ease;
+}
+
+.like-counter .like-btn:active {
+  transform: translateY(1px);
+}
+
+.like-counter .like-btn[aria-pressed="true"] {
+  font-weight: 700;
+}
+
+.like-counter .like-btn.up[aria-pressed="true"] {
+  border-color: #0b74de;
+  background: #e8f2ff;
+  color: #0b74de;
+}
+
+.like-counter .like-btn.down[aria-pressed="true"] {
+  border-color: #de3b3b;
+  background: #fff0f0;
+  color: #de3b3b;
+}
+
+.like-counter .like-btn svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.like-counter .count {
+  font-weight: 600;
+}

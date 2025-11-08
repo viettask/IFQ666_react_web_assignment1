@@ -1,0 +1,12 @@
+/* Styles for Home page hero */
+.home-hero { padding: 2rem 1rem; display:flex; justify-content:center; }
+.home-inner { display:flex; gap:2rem; align-items:center; max-width:960px; width:100%; }
+.home-photo, .home-logo { width:200px; height:300px; object-fit:cover; border:2px solid #fff; }
+.home-copy h1 { margin:0 0 0.5rem 0; font-size:1.75rem; }
+.home-copy p { margin:0 0 0.5rem 0; color:#222; }
+.home-copy .muted { color:#666; font-size:0.9rem; }
+
+@media (max-width:640px) {
+  .home-inner { flex-direction:column; text-align:center; }
+  .home-photo, .home-logo { width:120px; height:120px; }
+}
