@@ -1,0 +1,39 @@
+.toggle {
+  width: 51px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 50px;
+  margin: 2px;
+  cursor: pointer;
+  display: flex;          
+  align-items: center;       /* To center the spinner inside */
+  justify-content: flex-start;   /* Default position of spinner */
+  padding: 0 2.5px;    
+  box-sizing: border-box;  
+  transition: background-color 0.3s ease; 
+}
+.toggle.active {
+  background-color: white;
+  justify-content: flex-end;
+}
+.spinner {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  flex-shrink: 0; 
+}
+.spinner.active {
+  transform: translateX(1px);
+  background-color: #282c34
+}
+.toggle-control {
+  margin: 0 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.toggle-control > * {
+  cursor: pointer;
+}

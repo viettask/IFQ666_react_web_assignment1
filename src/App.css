@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Navigation styles */
+.App-nav {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.App-nav ul li a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: bold;  /* Optionally bold the text */
+  transition: color 0.2s;
+}
+.App-nav ul li a:hover {
+  color: white;
+}
+
+.App-nav ul li a.active {
+    /* Set the color to white or a bright, contrasting color to highlight it */
+    color: #ffffff;    
+    /* OPTIONAL: Add a subtle visual cue */
+}
+
+.App-main {
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+
+/* App.css or NavBar.css */
+
+/* Remove the bullet points from the list */
+.App-nav ul {
+  list-style-type: none;  /* Remove bullets */
+  padding: 0;  /* Remove default padding */
+  margin: 0;   /* Remove default margin */
+  display: flex;  /* Display list items in a row */
+}
+
+/* Style the list items */
+.App-nav li {
+  margin-right: 20px;  /* Add space between list items */
+}
+
+/* Styles for Home page hero */
+.home-hero { padding: 2rem 1rem; display:flex; justify-content:center; }
+.home-inner { display:flex; gap:2rem; align-items:center; max-width:960px; width:100%; }
+.home-photo, .home-logo { width:200px; height:3000px; object-fit:cover; border:2px solid #fff; }
+.home-copy h1 { margin:0 0 0.5rem 0; font-size:1.75rem; }
+.home-copy p { margin:0 0 0.5rem 0; color:#222; }
+.home-copy .muted { color:#666; font-size:0.9rem; }
+
+@media (max-width:640px) {
+  .home-inner { flex-direction:column; text-align:center; }
+  .home-photo, .home-logo { width:120px; height:120px; }
+}
+
+
+/* Minimal styles for Portfolio page */
+.gh-user { display:flex; gap:1rem; align-items:center; margin-bottom:1rem; }
+.repo-grid { list-style:none; padding:0; display:grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap:1rem; }
+.repo { padding:0.75rem; border:1px solid #ddd; border-radius:6px; background:#fff; }
+.repo h3 { margin:0 0 0.25rem 0; font-size:1rem; }
+.meta { font-size:0.85rem; color:#555; display:flex; gap:0.5rem; flex-wrap:wrap; }
+.loading, .error { padding:1rem; background:#fee; border-radius:6px; }
+.pagination { margin-top:1rem; display:flex; gap:0.5rem; align-items:center; }
+.desc { color:#333; margin:0.25rem 0; }
+.lang { background:#eef; padding:2px 6px; border-radius:4px; font-size:0.85rem; }
