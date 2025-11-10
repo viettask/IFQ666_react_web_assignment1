@@ -3,6 +3,7 @@ import LikeCounter from '../features/LikeCounter.jsx';
 import CardContact from '../features/CardContact.jsx';
 
 
+
 function About({ name = 'Viet Nguyen',   intro = "I'm a software developer with a passion of coding and technology.", greeting ='Let give me a bunch of like to support' }) {
 
   
@@ -22,6 +23,7 @@ function About({ name = 'Viet Nguyen',   intro = "I'm a software developer with 
       </div>
       <div className="container">
               <CardContact />
+
       </div>
 
     </section>

@@ -1,9 +1,10 @@
 .toggle {
   width: 51px;
   height: 25px;
-  background-color: #ccc;
+  background-color: #5f5b5b;
   border-radius: 50px;
-  margin: 2px;
+  /* smaller vertical spacing: top/bottom 8px, left/right keep 25px */
+  margin: 15px 25px 25px 25px;
   cursor: pointer;
   display: flex;          
   align-items: center;       /* To center the spinner inside */

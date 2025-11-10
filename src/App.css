@@ -37,6 +37,7 @@
   text-decoration: none;
   padding: 6px 10px;
   border-radius: 6px;
+  font-size: 1.8rem;  /* same as <h3> */
   font-weight: bold;  /* Optionally bold the text */
   transition: color 0.2s;
 }
