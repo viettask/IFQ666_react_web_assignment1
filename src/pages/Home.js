@@ -9,7 +9,7 @@ function Home({ name = 'Viet Nguyen', photo: propPhoto }) {
 
   return (
     <section className="page page-home d-flex flex-column align-items-center">
-    /* Top Section: Image + Greeting */
+    {/* Top Section: Image + Greeting */} 
         <div className="row justify-content-center">
           <div className="col-md-8 d-flex flex-column flex-md-row align-items-center justify-content-center gap-4">
             <img src={photo} alt={name} style={{ width: 280, height: 400, objectFit: 'cover' }} />
@@ -18,7 +18,7 @@ function Home({ name = 'Viet Nguyen', photo: propPhoto }) {
             </div>
           </div>
         </div>
-      /* Map Section */
+     { /* Map Section */}
       <div className="w-full px-4 mt-5">
         <GeoSearchGoogleMap />
       </div>

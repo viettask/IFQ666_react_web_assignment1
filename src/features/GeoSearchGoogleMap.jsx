@@ -98,10 +98,10 @@ export default function GeoSearchGoogleMap() {
           onChange={(e) => setQuery(e.target.value)}
           className="flex-1 border border-gray-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        <Button onClick={handleSearch} className="bg-blue-600 text-white">
+        <Button onClick={handleSearch} className="bg-blue-600 custom-text-black">
           <Search className="w-4 h-4 mr-1" /> Search
         </Button>
-        <Button onClick={handleLocation} variant="outline">
+        <Button onClick={handleLocation} variant="outline" className="custom-text-black border-black hover:bg-gray-200">
           <MapPin className="w-4 h-4 mr-1" /> Use my location
         </Button>
       </div>

@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import "./Toggle.css";
 
-function Toggle() {
+function Toggle({onToggle}) {
   const [on, setOn] = useState(false);
   const handleToggle = () => {
-    setOn(!on);
+    const newState = !on;
+    setOn(newState);
+
+    //Notify parent component of the toggle state change
+    if (onToggle) {
+      onToggle(newState);
+    }
   };
 
   return (
