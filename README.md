@@ -34,7 +34,8 @@ To run this project locally:
 ## Technologies Used
 
 - React
-- [Any other libraries or tools you used]
+- Bootstrap
+- axios
 
 ## License
 
