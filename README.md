@@ -12,6 +12,9 @@ Contributions are welcome! Here’s how you can help:
 1. Fork the repository.
 
 2. Create a new branch for your feature or fix:
+      ```bash
+   git checkout -b feature-or-fix-name
+   ```
 
 git checkout -b feature-or-fix-name
 
