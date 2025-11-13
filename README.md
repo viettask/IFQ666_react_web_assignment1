@@ -28,6 +28,19 @@ Contributions are welcome! Here’s how you can help:
 
 5. Open a Pull Request (PR) against the main repository. The repository owner will review and merge once approved.
 
+## Features
+
+- Basic React setup with a focus on the assignment requirements.
+- [List any additional features or components you implemented here.]
+
+## Technologies Used
+
+- React
+- HTML/CSS
+- Javascript (ES6)
+- Bootstrap
+- axios
+
 ## Project Setup
 
 To run this project locally:
@@ -52,18 +65,7 @@ To run this project locally:
    npm start
    ```
 
-## Features
 
-- Basic React setup with a focus on the assignment requirements.
-- [List any additional features or components you implemented here.]
-
-## Technologies Used
-
-- React
-- HTML/CSS
-- Javascript (ES6)
-- Bootstrap
-- axios
 
 ## License
 
