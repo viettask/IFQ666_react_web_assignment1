@@ -15,19 +15,16 @@ Contributions are welcome! Here’s how you can help:
       ```bash
    git checkout -b feature-or-fix-name
    ```
-
-git checkout -b feature-or-fix-name
-
-
+      
 3. Make your changes, and commit them with a meaningful message:
-
-git commit -m "Add <feature> / Fix <issue>"
-
+      ```bash
+   git commit -m "Add <feature>/Fix <issue>"
+   ```
 
 4. Push your branch to your fork:
-
-git push origin feature-or-fix-name
-
+      ```bash
+   git push origin feature-or-fix-name
+   ```
 
 5. Open a Pull Request (PR) against the main repository. The repository owner will review and merge once approved.
 
