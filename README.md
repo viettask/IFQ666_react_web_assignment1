@@ -2,7 +2,8 @@
 
 ## Purpose
 
-This application is a React‑based web project created to fulfil the requirements of Assignment 1 for the IFQ666 course. It serves as a portfolio to showcase a developer’s resume, skills, projects, and experience in a visually appealing and user-friendly way, demonstrating both design and technical capabilities using React.
+- This application is a React‑based web project created to fulfil the requirements of Assignment 1 for the IFQ666 course.
+- It serves as a portfolio to showcase a developer’s resume, skills, projects, and experience in a visually appealing and user-friendly way, demonstrating both design and technical capabilities using React.
 
 ## Project Setup
 
