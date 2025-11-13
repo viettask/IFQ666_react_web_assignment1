@@ -1,6 +1,8 @@
 # IFQ666 React Web Assignment 1
 
-This repository is for the IFQ666 React Web Assignment 1. It is a basic React application created as part of the assignment.
+## Purpose
+
+This application is a React‑based web project created to fulfil the requirements of Assignment 1 for the IFQ666 course. It demonstrates the use of React for building a web interface, with a focus on clean structure, responsive UI and maintainable code.
 
 ## Project Setup
 
