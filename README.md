@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This application is a React‑based web project created to fulfil the requirements of Assignment 1 for the IFQ666 course. It demonstrates the use of React for building a web interface, with a focus on clean structure, responsive UI and maintainable code.
+This application is a React‑based web project created to fulfil the requirements of Assignment 1 for the IFQ666 course. It serves as a portfolio to showcase a developer’s resume, skills, projects, and experience in a visually appealing and user-friendly way, demonstrating both design and technical capabilities using React.
 
 ## Project Setup
 
@@ -36,6 +36,8 @@ To run this project locally:
 ## Technologies Used
 
 - React
+- HTML/CSS
+- Javascript (ES6)
 - Bootstrap
 - axios
 
