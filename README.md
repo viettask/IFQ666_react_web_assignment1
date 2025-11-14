@@ -51,8 +51,11 @@ Follow these steps to contribute effectively:
 
 ## Repository Structure
 📦src
+
  ┣ 📂assets
+ 
  ┃ ┣ 📂icons
+ 
  ┃ ┃ ┣ 📜github.png
  ┃ ┃ ┣ 📜linkedin.png
  ┃ ┃ ┣ 📜mail.png
