@@ -56,6 +56,11 @@ Follow these steps to contribute effectively:
 
    - Portfolio Page: Showcases projects and creations, populated from Github API.
 
+6. External API integration.
+   The project uses multiple online APIs:
+   - API #1 – Project/portfolio data (for dynamic population of the Portfolio page)
+   - API #2 – Google Maps API via @react-google-maps/api (Used for location features and geolocation-based interactions)
+
 ## Technologies Used
 1. Core web technologies
    - HTML5 - structure and semantic layout
