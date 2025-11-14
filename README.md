@@ -38,8 +38,23 @@ Follow these steps to contribute effectively:
 
 ## Features
 
-- Basic React setup with a focus on the assignment requirements.
-- [List any additional features or components you implemented here.]
+1. Basic create-react-app setup with a focus on the assignment requirements.
+
+2. Responsive Design: The website adapts to all screen sizes, ensuring an optimal user experience on both desktop and mobile devices.
+
+3. Header with navigation bar menu: A simple and accessible menu allowing users to navigate between pages such as Home, About, Resume, Portfolio, Search, and Photos.
+
+4. Footer: A consistent footer across all pages with email contact and legal information.
+
+5. Pages:
+
+   - Home Page: Includes a hero image and introduction text.
+
+   - About Page: Describes the individual or entity the website represents.
+
+   - Resume Page: Displays a professional summary, career history, skills, and publications.
+
+   - Portfolio Page: Showcases projects and creations, populated from an external API.
 
 ## Technologies Used
 
