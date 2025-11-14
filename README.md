@@ -57,19 +57,31 @@ Follow these steps to contribute effectively:
    - Portfolio Page: Showcases projects and creations, populated from Github API.
 
 ## Technologies Used
-1. Frontend Framework
+1. Core web technologies
+   - HTML5 - structure and semantic layout
+   - CSS3 - Styling, animations, responsive design
+   - Javascript (ES6+) - logic, components, and API integration
+     
+2. Frontend Framework
    - React 18 - Component based UI development
    - React Router DOM 17 - Client-side routing for multiple pages
 
-2. Styling & UI
+3. Styling & UI
    - Bootstrap 5 - layout and pre-built components
-   - Lucide React - Modern SVG icons
-     
-   - HTML/CSS
-- Javascript (ES6)
-- Bootstrap
-- axios
+   - Lucide React - Icon library
 
+4. APIs & Data fetching:
+   - Axios - HTTP requests
+   - @react-google-maps/api - Google Maps rendering + geolocation
+
+5. Testing
+   - React testing library
+   - Jest DOM
+   - User Event
+
+6. Build Tools
+   - Create React App (react-scripts)
+     
 ## Repository Structure
  ```bash
 .
