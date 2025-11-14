@@ -50,8 +50,8 @@ Follow these steps to contribute effectively:
 - axios
 
 ## Repository Structure
-      ```bash
-      .
+ ```bash
+.
 ├── assets
 │   ├── icons
 │   │   ├── github.png
@@ -89,7 +89,7 @@ Follow these steps to contribute effectively:
 ├── index.css
 ├── index.js
 └── reportWebVitals.js
-   ```
+```
 
 ## Project Setup
 
