@@ -51,7 +51,7 @@ Follow these steps to contribute effectively:
 
 ## Repository Structure
       ```bash
-   .
+      .
 ├── assets
 │   ├── icons
 │   │   ├── github.png
