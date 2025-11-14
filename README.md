@@ -49,6 +49,46 @@ Follow these steps to contribute effectively:
 - Bootstrap
 - axios
 
+## Repository Structure
+📦src
+ ┣ 📂assets
+ ┃ ┣ 📂icons
+ ┃ ┃ ┣ 📜github.png
+ ┃ ┃ ┣ 📜linkedin.png
+ ┃ ┃ ┣ 📜mail.png
+ ┃ ┃ ┣ 📜telephone.png
+ ┃ ┃ ┗ 📜web.png
+ ┃ ┗ 📜henry_cookie.jfif
+ ┣ 📂features
+ ┃ ┣ 📜Button.jsx
+ ┃ ┣ 📜Card.jsx
+ ┃ ┣ 📜CardContact.css
+ ┃ ┣ 📜CardContact.jsx
+ ┃ ┣ 📜CardContent.jsx
+ ┃ ┣ 📜dataContact.jsx
+ ┃ ┣ 📜dataResume.jsx
+ ┃ ┣ 📜GeoSearchGoogleMap.jsx
+ ┃ ┣ 📜LikeCounter.css
+ ┃ ┣ 📜LikeCounter.jsx
+ ┃ ┣ 📜NavBar.jsx
+ ┃ ┣ 📜Toggle.css
+ ┃ ┗ 📜Toggle.jsx
+ ┣ 📂pages
+ ┃ ┣ 📜About.js
+ ┃ ┣ 📜Home.css
+ ┃ ┣ 📜Home.js
+ ┃ ┣ 📜Portfolio.css
+ ┃ ┣ 📜Portfolio.js
+ ┃ ┗ 📜Resume.js
+ ┣ 📜App.css
+ ┣ 📜App.js
+ ┣ 📜ErrorBoundary.js
+ ┣ 📜GitHubRepos.css
+ ┣ 📜GitHubRepos.js
+ ┣ 📜index.css
+ ┣ 📜index.js
+ ┗ 📜reportWebVitals.js
+
 ## Project Setup
 
 To run this project locally:
