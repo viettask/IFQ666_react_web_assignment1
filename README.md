@@ -7,26 +7,34 @@
 
 ## Contributing
 
-Contributions are welcome! Here’s how you can help:
+Contributions from other developers who want to improve IFQ666 are welcome! 
+Follow these steps to contribute effectively:
 
 1. Fork the repository.
+   Click the Fork button on Github to create your own copy of the project
 
-2. Create a new branch for your feature or fix:
+2. Clone your fork
+      ```bash
+   git clone https://github.com/viettask/IFQ666_react_web_assignment1.git
+   ```
+   
+3. Create a new branch for your feature or fix:
       ```bash
    git checkout -b feature-or-fix-name
    ```
       
-3. Make your changes, and commit them with a meaningful message:
+4. Make your changes, and commit them with a meaningful message:
+   Update README.md if needed
       ```bash
    git commit -m "Add <feature>/Fix <issue>"
    ```
 
-4. Push your branch to your fork:
+5. Push your branch to your fork:
       ```bash
    git push origin feature-or-fix-name
    ```
 
-5. Open a Pull Request (PR) against the main repository. The repository owner will review and merge once approved.
+6. Open a Pull Request (PR) against the main repository. The repository owner will review and merge once approved.
 
 ## Features
 
