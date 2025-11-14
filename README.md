@@ -50,16 +50,22 @@ Follow these steps to contribute effectively:
 
    - Home Page: Includes a hero image and introduction text.
 
-   - About Page: Describes the individual or entity the website represents.
+   - About Page: Personal information.
 
-   - Resume Page: Displays a professional summary, career history, skills, and publications.
+   - Resume Page: Displays a professional summary, career history, skills, and qualifications.
 
-   - Portfolio Page: Showcases projects and creations, populated from an external API.
+   - Portfolio Page: Showcases projects and creations, populated from Github API.
 
 ## Technologies Used
+1. Frontend Framework
+   - React 18 - Component based UI development
+   - React Router DOM 17 - Client-side routing for multiple pages
 
-- React
-- HTML/CSS
+2. Styling & UI
+   - Bootstrap 5 - layout and pre-built components
+   - Lucide React - Modern SVG icons
+     
+   - HTML/CSS
 - Javascript (ES6)
 - Bootstrap
 - axios
@@ -130,8 +136,12 @@ To run this project locally:
    npm start
    ```
 
-
+## Acknowledgements
+- Google Maps JavaScript API
+- React documentation
+- Bootstrap & Tailwind CSS documentation
+- Online public APIs for project data
 
 ## License
 
-[Include license information if applicable.]
+This project is licensed under the MIT License.
