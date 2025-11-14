@@ -156,7 +156,7 @@ To run this project locally:
 ## Acknowledgements
 - Google Maps JavaScript API
 - React documentation
-- Bootstrap & Tailwind CSS documentation
+- Bootstrap documentation
 - Online public APIs for project data
 
 ## License
