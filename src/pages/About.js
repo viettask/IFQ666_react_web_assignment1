@@ -5,7 +5,7 @@ import CardContact from '../features/CardContact.jsx';
 
 
 function About({ name = 'Viet Nguyen',   intro = "I'm a software developer with a passion of coding and technology.", greeting ='Let give me a bunch of like to support' }) {
-
+  intro = "A full-stack developer specializing in scalable web applications, cloud solutions and data engineering." || intro;
   
   return (
     <section className="page page-about d-flex align-items-center">
@@ -14,6 +14,7 @@ function About({ name = 'Viet Nguyen',   intro = "I'm a software developer with 
           <div className="col-md-8 text-center">
             <h3 className="mb-2">{name}</h3>
             <p>{intro}</p>
+            <br />
             <p>{greeting}</p>
             <div className="d-flex justify-content-center mt-3">
               <LikeCounter />

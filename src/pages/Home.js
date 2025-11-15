@@ -1,6 +1,6 @@
 import React from 'react';
 import defaultPhoto from '../assets/henry_cookie.jfif';
-import GeoSearchGoogleMap from '../features/GeoSearchGoogleMap.jsx';
+
 
 //Home component with props destructuring
 function Home({ name = 'Viet Nguyen', photo: propPhoto }) {
@@ -18,10 +18,7 @@ function Home({ name = 'Viet Nguyen', photo: propPhoto }) {
             </div>
           </div>
         </div>
-     { /* Map Section */}
-      <div className="w-full px-4 mt-5">
-        <GeoSearchGoogleMap />
-      </div>
+
     </section>
   );
 }

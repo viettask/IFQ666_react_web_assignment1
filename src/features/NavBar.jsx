@@ -25,7 +25,9 @@ function NavBar() {
         { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
         { name: 'Resume', path: '/resume' },
-        { name: 'Portfolio', path: '/portfolio' }
+        { name: 'Portfolio', path: '/portfolio' },
+        { name: 'Search', path: '/search' },
+        { name: 'Photos', path: '/photos' }
     ];
 
     return (

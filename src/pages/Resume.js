@@ -16,7 +16,7 @@ function Resume() {
         {resumeData.careerHistory.map((job, index) => (
           <div key={index} className="mb-3">
             <h4 className="h5">{job.jobTitle}</h4>
-            <p className="text-muted">{job.dates}</p>
+            <p className="">{job.dates}</p>
             <ul className="list-group">
               {job.responsibilities.map((responsibility, idx) => (
                 <li key={idx} className="list-group-item">{responsibility}</li>
@@ -46,7 +46,7 @@ function Resume() {
           {resumeData.qualifications.map((qualification, index) => (
             <li key={index}>
               <h5>{qualification.degree}</h5>
-              <p className="text-muted">{qualification.institution}, {qualification.year}</p>
+              <p className="">{qualification.institution}, {qualification.year}</p>
             </li>
           ))}
         </ul>

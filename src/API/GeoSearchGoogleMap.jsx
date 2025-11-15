@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
-import Button from "./Button";
-import Card from "./Card"; 
-import CardContent from "./CardContent";
+import Button from "../features/Button";
+import Card from "../features/Card";
+import CardContent from "../features/CardContent";
 import { MapPin, Search } from "lucide-react";
 
 const mapContainerStyle = {

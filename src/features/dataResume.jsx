@@ -1,6 +1,6 @@
 const resumeData = {
   overview: {
-    summary: "A highly motivated and results-oriented software developer with passion in coding and technology."
+    summary: "●	I’m a software developer with a passion for full-stack development, complemented by additional skills in data and DevOps, enabling me to create scalable solutions and optimise processes throughout the tech stack."
   },
   careerHistory: [
     {
