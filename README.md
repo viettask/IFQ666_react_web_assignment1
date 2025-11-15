@@ -89,49 +89,18 @@ Follow these steps to contribute effectively:
      
 ## Repository Structure
  ```bash
-.
-├── API
-│   ├── GeoSearchGoogleMap.jsx
-│   ├── GithubRepoProfile.jsx
-│   ├── PicSum.jsx
-│   └── SearchForm.jsx
-├── assets
-│   ├── icons
-│   │   ├── github.png
-│   │   ├── linkedin.png
-│   │   ├── mail.png
-│   │   ├── telephone.png
-│   │   └── web.png
-│   └── henry_cookie.jfif
-├── features
-│   ├── Button.jsx
-│   ├── Card.jsx
-│   ├── CardContact.css
-│   ├── CardContact.jsx
-│   ├── CardContent.jsx
-│   ├── dataContact.jsx
-│   ├── dataResume.jsx
-│   ├── Footer.jsx
-│   ├── LikeCounter.css
-│   ├── LikeCounter.jsx
-│   ├── NavBar.jsx
-│   ├── Toggle.css
-│   └── Toggle.jsx
-├── pages
-│   ├── About.js
-│   ├── Home.css
-│   ├── Home.js
-│   ├── Photos.jsx
-│   ├── Portfolio.css
-│   ├── Portfolio.js
-│   ├── Resume.js
-│   └── Search.jsx
-├── App.css
-├── App.js
-├── ErrorBoundary.js
-├── index.css
-├── index.js
-└── reportWebVitals.js
+/IFQ666_react_web_assignment1 
+├── src
+│   ├── API                           # API components (Github, Google Maps Javascript, NewsAPI, PicSum) 
+│   ├── assets                        # Public assets (icons, photos)
+│   ├── features                      # Feature components
+│   ├── pages                         # App pages (Home, About, Resume, Portfolio, Search, Photos)
+│   ├── App.css                       # Global and component styles
+│   ├── App.js                        # Main routing setup
+│   ├── index.js                      # React entry point
+├── LICENSE.txt                       # License file
+├── package.json                      # Lists all project dependencies, scripts, and metadata for React
+└── README.md
 ```
 
 ## Project Setup
