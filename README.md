@@ -56,20 +56,28 @@ Follow these steps to contribute effectively:
 
    - Portfolio Page: Showcases projects and creations, populated from Github API.
 
+   - Search Page: Showcases of NewsAPI search and Google Maps Javascript API
+
+   - Photos Page: Showcases of Picsum API 
+
 6. External API integration.
    The project uses multiple online APIs:
-   - API #1 – Project/portfolio data (for dynamic population of the Portfolio page)
+   - API #1 – Github Project/portfolio data (for dynamic population of the Portfolio page)
    - API #2 – Google Maps API via @react-google-maps/api (Used for location features and geolocation-based interactions)
+   - API #3 - NewsAPI for a topic that enter from user
+   - API #4 - Picsum API to generate a list of photos
 
 ## Technologies Used
 1. Core web technologies
    - HTML5 - structure and semantic layout
    - CSS3 - Styling, animations, responsive design
    - Javascript (ES6+) - logic, components, and API integration
+   
      
 2. Frontend Framework
    - React 18 - Component based UI development
    - React Router DOM 17 - Client-side routing for multiple pages
+   - React Select - Flexible and customizable dropdown/select component for React
 
 3. Styling & UI
    - Bootstrap 5 - layout and pre-built components
