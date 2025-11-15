@@ -90,6 +90,11 @@ Follow these steps to contribute effectively:
 ## Repository Structure
  ```bash
 .
+├── API
+│   ├── GeoSearchGoogleMap.jsx
+│   ├── GithubRepoProfile.jsx
+│   ├── PicSum.jsx
+│   └── SearchForm.jsx
 ├── assets
 │   ├── icons
 │   │   ├── github.png
@@ -106,7 +111,7 @@ Follow these steps to contribute effectively:
 │   ├── CardContent.jsx
 │   ├── dataContact.jsx
 │   ├── dataResume.jsx
-│   ├── GeoSearchGoogleMap.jsx
+│   ├── Footer.jsx
 │   ├── LikeCounter.css
 │   ├── LikeCounter.jsx
 │   ├── NavBar.jsx
@@ -116,14 +121,14 @@ Follow these steps to contribute effectively:
 │   ├── About.js
 │   ├── Home.css
 │   ├── Home.js
+│   ├── Photos.jsx
 │   ├── Portfolio.css
 │   ├── Portfolio.js
-│   └── Resume.js
+│   ├── Resume.js
+│   └── Search.jsx
 ├── App.css
 ├── App.js
 ├── ErrorBoundary.js
-├── GitHubRepos.css
-├── GitHubRepos.js
 ├── index.css
 ├── index.js
 └── reportWebVitals.js
