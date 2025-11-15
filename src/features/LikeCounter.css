@@ -1,3 +1,12 @@
+/* 
+  .like-counter
+  --------------------------
+  The main container for the like counter.
+  Uses inline-flex to lay out the like button(s) and count horizontally.
+  gap: 12px -> spacing between child elements (button and count)
+  align-items: center -> vertically centers the children
+  font-family -> sets a clean system font stack for consistent rendering across platforms
+*/
 .like-counter {
   display: inline-flex;
   gap: 12px;
@@ -5,6 +14,20 @@
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
+/* 
+  .like-btn
+  --------------------------
+  Styles for individual like/dislike buttons inside .like-counter.
+  display: inline-flex -> allows icon + text to sit horizontally
+  align-items: center -> vertically center icon and text
+  gap: 8px -> spacing between icon and text
+  padding -> space inside button
+  border-radius -> rounded corners
+  border -> light gray border
+  background -> white button background
+  cursor: pointer -> pointer on hover
+  transition -> smooth animation for background, border, and transform changes
+*/
 .like-counter .like-btn {
   display: inline-flex;
   align-items: center;
@@ -17,32 +40,69 @@
   transition: background 150ms ease, border-color 150ms ease, transform 80ms ease;
 }
 
+/* 
+  Button press feedback
+  --------------------------
+  Moves the button slightly down on click for tactile feedback
+*/
 .like-counter .like-btn:active {
   transform: translateY(1px);
 }
 
+/* 
+  Pressed state (aria-pressed="true")
+  --------------------------
+  Bold text when the button is toggled on
+*/
 .like-counter .like-btn[aria-pressed="true"] {
   font-weight: 700;
 }
 
+/* 
+  Upvote button active state
+  --------------------------
+  Styles applied when the "up" button is pressed:
+  - Blue border and text
+  - Light blue background
+*/
 .like-counter .like-btn.up[aria-pressed="true"] {
   border-color: #0b74de;
   background: #e8f2ff;
   color: #0b74de;
 }
 
+/* 
+  Downvote button active state
+  --------------------------
+  Styles applied when the "down" button is pressed:
+  - Red border and text
+  - Light red/pink background
+*/
 .like-counter .like-btn.down[aria-pressed="true"] {
   border-color: #de3b3b;
   background: #fff0f0;
   color: #de3b3b;
 }
 
+/* 
+  SVG icons inside buttons
+  --------------------------
+  - Fixed width and height
+  - Ensures consistent icon sizing
+  - display: block removes any extra inline spacing around SVG
+*/
 .like-counter .like-btn svg {
   width: 18px;
   height: 18px;
   display: block;
 }
 
+/* 
+  Count display
+  --------------------------
+  - Font-weight 600 for emphasis
+  - Used to display the current like/dislike count
+*/
 .like-counter .count {
   font-weight: 600;
 }

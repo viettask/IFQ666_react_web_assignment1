@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import axios from "axios";
 import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 import Button from "../features/Button";
@@ -6,14 +6,25 @@ import Card from "../features/Card";
 import CardContent from "../features/CardContent";
 import { MapPin, Search } from "lucide-react";
 
+// ----------------------
+// CONFIG
+// ----------------------
+const GOOGLE_API_KEY = "AIzaSyAN4u9CdMX3f5fxnjsDZh32BbF-xxdzin8";
+
+// Map style & default center
 const mapContainerStyle = {
   width: "100%",
   height: "400px",
   borderRadius: "1rem",
 };
 
-const defaultCenter = { lat: -33.8688, lng: 151.2093 }; // Sydney default
+// Sydney default
+const defaultCenter = { lat: -33.8688, lng: 151.2093 };
 
+// ----------------------
+// COMPONENT
+// ----------------------
+// Export the component so it can be used in other parts of the app
 export default function GeoSearchGoogleMap() {
   const [query, setQuery] = useState("");
   const [location, setLocation] = useState(null);
@@ -21,75 +32,76 @@ export default function GeoSearchGoogleMap() {
 
   // Load Google Maps script
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyAN4u9CdMX3f5fxnjsDZh32BbF-xxdzin8", // must enable Maps + Places APIs
+    // must enable Maps + Places APIs
+    googleMapsApiKey: GOOGLE_API_KEY,
   });
 
   // Get current location
-  const handleLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          setLocation({
-            lat: pos.coords.latitude,
-            lng: pos.coords.longitude,
-          });
-        },
-        (err) => {
-          console.error(err);
-          alert("Unable to fetch location.");
-        }
-      );
-    } else {
-      alert("Geolocation not supported by your browser.");
+  const handleLocation = useCallback(() => {
+    if (!navigator.geolocation) {
+      return alert("Geolocation is not supported by your browser.");
     }
-  };
 
-  // Search nearby places
-  const handleSearch = async () => {
+    navigator.geolocation.getCurrentPosition(
+      (pos) =>
+        setLocation({
+          lat: pos.coords.latitude,
+          lng: pos.coords.longitude,
+        }),
+      () => alert("Unable to fetch your location.")
+    );
+  }, []);
+
+  // ----------------------
+  // SEARCH FUNCTION
+  // ----------------------
+  const handleSearch = useCallback(async () => {
     if (!location) {
-      alert("Please allow location access first.");
-      return;
+      return alert("Please allow location access first.");
     }
 
     try {
-      const response = await axios.get(
+      const { data } = await axios.get(
         "https://maps.googleapis.com/maps/api/place/nearbysearch/json",
         {
           params: {
             location: `${location.lat},${location.lng}`,
             radius: 2000,
             keyword: query,
-            key: "AIzaSyAN4u9CdMX3f5fxnjsDZh32BbF-xxdzin8",
+            key: GOOGLE_API_KEY,
           },
         }
       );
 
-      const data = response.data;
       if (data.status !== "OK") {
-        console.error(data);
-        alert(`Google API Error: ${data.status}`);
-        return;
+        return alert(`Google API Error: ${data.status}`);
       }
 
       setResults(
         data.results.map((place) => ({
           id: place.place_id,
           name: place.name,
+          address: place.vicinity,
           lat: place.geometry.location.lat,
           lng: place.geometry.location.lng,
-          address: place.vicinity,
         }))
       );
-    } catch (error) {
-      console.error("Axios error:", error);
+    } catch (err) {
+      console.error(err);
       alert("Failed to fetch nearby places.");
     }
-  };
+  }, [location, query]);
 
   if (!isLoaded) return <div>Loading map...</div>;
 
+
+
+  // ----------------------
+  // UI
+  // ----------------------
   return (
     <div className="flex flex-col items-center p-4 space-y-4 w-full max-w-3xl mx-auto">
+      {/* Search Row */}
       <div className="flex items-center w-full space-x-2">
         <input
           type="text"
@@ -107,11 +119,14 @@ export default function GeoSearchGoogleMap() {
       </div>
 
       <div className="w-full">
+        {/* Google Map rendering */}
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
           zoom={14}
           center={location || defaultCenter}
         >
+
+          {/* Markers */}
           {location && <Marker position={location} label="📍You" />}
           {results.map((place) => (
             <Marker
@@ -123,6 +138,7 @@ export default function GeoSearchGoogleMap() {
         </GoogleMap>
       </div>
 
+      {/* Results List */}
       <div className="grid gap-2 w-full">
         {results.map((place) => (
           <Card key={place.id} className="shadow-sm">

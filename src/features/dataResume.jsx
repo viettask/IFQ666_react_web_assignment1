@@ -1,3 +1,18 @@
+
+/**
+ * resumeData Object
+ *
+ * Purpose:
+ * This object organizes all the resume information of a candidate in a structured format.
+ * It can be used to dynamically render resume sections in a React application or any other frontend project.
+ *
+ * Structure:
+ * 1. overview      : Contains a brief summary of the candidate.
+ * 2. careerHistory : An array of objects, each representing a job experience.
+ * 3. skills        : An array of technical and professional skills.
+ * 4. publications  : An array for listing any publications (currently empty).
+ * 5. qualifications: An array of educational qualifications and certifications.
+ */
 const resumeData = {
   overview: {
     summary: "●	I’m a software developer with a passion for full-stack development, complemented by additional skills in data and DevOps, enabling me to create scalable solutions and optimise processes throughout the tech stack."
@@ -42,4 +57,5 @@ const resumeData = {
   ]
 };
 
+// Exporting the object to be used in other modules/components
 export default resumeData;

@@ -1,9 +1,33 @@
+// Importing icon images for each contact method
 import emailIcon from '../assets/icons/mail.png';
 import linkedinIcon from '../assets/icons/linkedin.png';
 import githubIcon from '../assets/icons/github.png';
 import phoneIcon from '../assets/icons/telephone.png';
 import webIcon from '../assets/icons/web.png';
 
+
+/**
+ * contacts Array
+ *
+ * Purpose:
+ * This array stores all the contact methods for a user, along with relevant details.
+ * Each item in the array represents a single contact method.
+ *
+ * Structure of each contact object:
+ * - id: Unique identifier for the contact (used as React key when rendering lists)
+ * - method: The type of contact (e.g., email, LinkedIn, GitHub, phone, website)
+ * - icon: The imported image icon representing the contact method
+ * - link: The URL or protocol link for the contact
+ *         Examples:
+ *           - "mailto:..." for email
+ *           - "tel:..." for phone
+ *           - "https://..." for website or social profile
+ * - value: The visible text or value to display in the UI (e.g., email address, phone number, username)
+ *
+ * Usage:
+ * This array can be mapped over in a React component to dynamically generate contact cards or links.
+ * For example, a "Contact" section can render each item with its icon, clickable link, and display value.
+ */
 const contacts = [
   {
     id: 1,
@@ -42,4 +66,6 @@ const contacts = [
   }
 ];
 
+
+// Export the array for use in other components
 export default contacts;

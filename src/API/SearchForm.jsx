@@ -1,23 +1,41 @@
+// Import React and necessary hooks
 import React, { useState } from 'react';
+// Import react-select dropdown component
 import Select from 'react-select';
+// Import axios for API calls
 import axios from 'axios';
 
 
 function SearchForm() {
+    // Stores the user's text input for adding a new industry option
     const [industry, setIndustry] = React.useState("");
+
+    // Stores form-related validation errors
     const [error, setError] = React.useState(null);
+
+    // Predefined list of dropdown options
     const [options, setOptions] = React.useState([
         { value: 'software', label: 'Software' },
         { value: 'devops', label: 'Devops' },
         { value: 'data', label: 'Data' }
     ]);
 
+    // Stores the currently selected dropdown option
+
     const [selectedOption, setSelectedOption] = useState(null);
+    // Stores fetched news articles
     const [articles, setArticles] = useState([]);
+    // Tracks loading state during API call
     const [loading, setLoading] = useState(false);
 
-
+    /**
+     * 🔹 Add new user-defined industry to the dropdown list
+     * - Validates for empty input
+     * - Prevents duplicates
+     * - Formats the label correctly (capitalize)
+     */
     const handleAddOption = () => {
+        // ignore empty values
         if (!industry.trim()) return;
 
         const newOption = {
@@ -31,10 +49,16 @@ function SearchForm() {
             return;
         }
 
+        // Add new option to dropdown
         setOptions(prev => [...prev, newOption]);
+        // Reset input and error message
         setIndustry("");
         setError(null);
     };
+
+    /**
+ * 🔹 Fetch news articles from NewsAPI based on the selected option
+ */
 
     const handleSearch = async () => {
         if (!selectedOption) {
@@ -43,32 +67,36 @@ function SearchForm() {
         }
 
         setLoading(true);
+        // reset previous results
         setArticles([]);
         try {
-            const apiKey = '7b095b192f894b7d9d8a66750fb79c23'; // replace with your NewsAPI key
+            const apiKey = '7b095b192f894b7d9d8a66750fb79c23'; //NewsAPI key
             const response = await axios.get(
                 `https://newsapi.org/v2/everything?q=${encodeURIComponent(selectedOption.value)}&sortBy=publishedAt&pageSize=10&apiKey=${apiKey}`
             );
+            // Store fetched results
             setArticles(response.data.articles);
         } catch (err) {
             console.error(err);
             alert("Failed to fetch news. Please try again.");
         } finally {
+            // Always stop loading
             setLoading(false);
         }
     };
 
 
     return (
-        <div className='max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md'>
+        <div className='max-w-md mx-auto mt-10 p-6 rounded-lg shadow-md'>
             {/* Title */}
             <h3 className="text-xl font-semibold mb-2">Please enter an industry that you like?  </h3>
             <h5 className="text-gray-600 mb-4 text-sm">Software, Devops, Data are addressed.</h5>
 
-            {/* Input field */}
+            {/* Text input for adding new industry */}
             <div className="mb-4">
                 <label htmlFor="industry" className='block text-gray-700 font-medium mb-1'>Your answer: </label>
                 <input
+                    className='button'
                     type="text"
                     name="industry"
                     id="industry"
@@ -88,14 +116,14 @@ function SearchForm() {
 
             </div>
 
-
+            {/* Error message (shows if user enters numbers) */}
             {error != null ? <p className="text-red-500 mt-1">Error: {error}</p> : (<p className="text-red-500 mt-1">please do not enter numbers</p>)}
 
-            {/* Add button */}
+            {/* Button to add new industry to dropdown */}
             <div className="mb-4">
                 <button
                     onClick={handleAddOption}
-                    className="mt-2 px-3 py-1text-black rounded"
+                    className="mt-2 px-3 py-1text-black rounded button"
                 >
                     Add to Select
                 </button>
@@ -109,7 +137,7 @@ function SearchForm() {
                     value={selectedOption}
                     onChange={setSelectedOption}   // <-- this uses setSelectedOption
                     placeholder="Select your favorite career path"
-                    className="mb-4"
+                    className="mb-4 text-black"
                     isClearable
                 />
             </div>
@@ -118,7 +146,7 @@ function SearchForm() {
             <div className="mb-4">
                 <button
                     onClick={handleSearch}
-                    className="mt-2 px-3 py-1 bg-green-500 text-black rounded"
+                    className="mt-2 px-3 py-1 bg-green-500 text-black rounded button"
                 >
                     Search
                 </button>
@@ -145,4 +173,5 @@ function SearchForm() {
     )
 }
 
+// Export the component so it can be used in other parts of the app
 export default SearchForm

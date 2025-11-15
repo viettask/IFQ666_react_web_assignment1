@@ -80,8 +80,9 @@ Follow these steps to contribute effectively:
    - React Select - Flexible and customizable dropdown/select component for React
 
 3. Styling & UI
-   - Bootstrap 5 - layout and pre-built components
+   - Bootstrap 5 & TailwindCSS - layout and pre-built components
    - Lucide React - Icon library
+    
 
 4. APIs & Data fetching:
    - Axios - HTTP requests
@@ -145,8 +146,6 @@ To run this project locally:
 - Github APIs 
 - Picsum APIs
 - NewsAPI
-
-## License
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE] file for details.
