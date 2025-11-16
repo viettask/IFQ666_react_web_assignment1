@@ -146,6 +146,8 @@ To run this project locally:
 - Github APIs 
 - Picsum APIs
 - NewsAPI
+- Tailwind CSS documentation
+- QUT IFQ6666 Web and Mobile App Developement materials
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE] file for details.
