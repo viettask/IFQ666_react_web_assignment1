@@ -18,7 +18,7 @@ function GithubRepoProfile({ username = 'viettask' }) {
     // ------------------------------------------------
     useEffect(() => {
 
-        // Optional token from env (REACT_APP_GITHUB_TOKEN)
+        // // Optional token from env (REACT_APP_GITHUB_TOKEN)
         const token = process.env.REACT_APP_GITHUB_TOKEN;
         const headers = token ? { Authorization: `token ${token}` } : {};
 

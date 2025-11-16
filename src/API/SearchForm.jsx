@@ -38,6 +38,12 @@ function SearchForm() {
         // ignore empty values
         if (!industry.trim()) return;
 
+        //  Reject if it contains numbers
+        if (/\d/.test(industry.trim())) {
+            setError("Industry shouldn't contain numbers.");
+            return;
+        }
+
         const newOption = {
             value: industry.toLowerCase(),
             label: industry.charAt(0).toUpperCase() + industry.slice(1)
@@ -94,7 +100,7 @@ function SearchForm() {
 
             {/* Text input for adding new industry */}
             <div className="mb-4">
-                <label htmlFor="industry" className='block text-gray-700 font-medium mb-1'>Your answer: </label>
+                <label htmlFor="industry" className='block text-gray-700 font-medium mb-1  me-2'>Your answer: </label>
                 <input
                     className='button'
                     type="text"
@@ -158,7 +164,7 @@ function SearchForm() {
                 {!loading && articles.length > 0 && (
                     <div className="space-y-4">
                         {articles.map((article, idx) => (
-                            <div key={idx} className="p-3 bg-gray-100 rounded shadow">
+                            <div key={idx} className="p-3 bg-gray-100 rounded shadow mt-4">
                                 <h3 className="font-semibold">{article.title}</h3>
                                 <p className="text-sm text-gray-700">{article.description}</p>
                                 <a href={article.url} target="_blank" rel="noopener noreferrer" className="text-blue-500">

@@ -102,18 +102,18 @@ export default function GeoSearchGoogleMap() {
   return (
     <div className="flex flex-col items-center p-4 space-y-4 w-full max-w-3xl mx-auto">
       {/* Search Row */}
-      <div className="flex items-center w-full space-x-2">
+      <div className="d-flex align-items-center w-100">
         <input
           type="text"
           placeholder="Search nearby..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="flex-1 border border-gray-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex-1 border border-gray-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 me-2"
         />
-        <Button onClick={handleSearch} className="bg-blue-600 custom-text-black">
+        <Button onClick={handleSearch} className="bg-blue-600 custom-text-black button me-2">
           <Search className="w-4 h-4 mr-1" /> Search
         </Button>
-        <Button onClick={handleLocation} variant="outline" className="custom-text-black border-black hover:bg-gray-200">
+        <Button onClick={handleLocation} variant="outline" className="custom-text-black border-black hover:bg-gray-200 button me-1">
           <MapPin className="w-4 h-4 mr-1" /> Use my location
         </Button>
       </div>
