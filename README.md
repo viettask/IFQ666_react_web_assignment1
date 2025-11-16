@@ -148,6 +148,7 @@ To run this project locally:
 - NewsAPI
 - Tailwind CSS documentation
 - QUT IFQ6666 Web and Mobile App Developement materials
+- https://github.com/viettask/mybrandname_readme_generator
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE] file for details.
